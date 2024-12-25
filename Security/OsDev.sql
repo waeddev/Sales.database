@@ -1,0 +1,2 @@
+﻿CREATE USER [OsDev] FOR LOGIN [OsDev];
+
