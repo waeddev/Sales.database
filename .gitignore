@@ -10,3 +10,9 @@
 /Sales.database.dbmdl
 /Sales.database.jfm
 /bin/Debug
+Sales.database.sqlproj_backup
+.gitignore
+obj/project.nuget.cache
+obj/Sales.database.sqlproj.nuget.dgspec.json
+obj/Sales.database.sqlproj.nuget.g.props
+obj/Sales.database.sqlproj.nuget.g.targets
