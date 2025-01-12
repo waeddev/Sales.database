@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[ProductVariation] (
+CREATE TABLE [dbo].[ProductVariation] (
     [Id]                INT                IDENTITY (1, 1) NOT NULL,
     [ProductId]         INT                NOT NULL,
     [ProductTypeId]     INT                NULL,
@@ -7,7 +7,6 @@
     [CompanyId]         INT                NULL,
     [UnitId]            INT                NULL,
     [LowStockThreshold] INT                NULL,
-    [StoreId]           INT                NOT NULL,
     [Discount]          DECIMAL (18, 2)    NULL,
     [Sku]               NVARCHAR (MAX)     NULL,
     [Barcode]           NVARCHAR (MAX)     NULL,
@@ -28,7 +27,6 @@
     [LastModifiedBy]    NVARCHAR (250)     NULL,
     CONSTRAINT [PK_ProductVariation] PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_ProductVariation_Product] FOREIGN KEY ([ProductId]) REFERENCES [dbo].[Product] ([Id]),
-    CONSTRAINT [FK_ProductVariation_Store] FOREIGN KEY ([StoreId]) REFERENCES [dbo].[Store] ([Id]),
     CONSTRAINT [FK_ProductVariation_Unit] FOREIGN KEY ([UnitId]) REFERENCES [dbo].[Unit] ([Id])
 );
 

@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Product] (
+CREATE TABLE [dbo].[Product] (
     [Id]                INT                IDENTITY (1, 1) NOT NULL,
     [ProductTypeId]     INT                NOT NULL,
     [ProductName]       NVARCHAR (MAX)     NULL,
@@ -26,6 +26,7 @@
     [SaleVat]           DECIMAL (18, 2)    NOT NULL,
     [PurchasingVat]     DECIMAL (18, 2)    NOT NULL,
     [Description]       NVARCHAR (MAX)     NULL,
+    [CostPrice]         DECIMAL (18, 2)    DEFAULT ((0)) NULL,
     CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Product_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Categories] ([Id]),
     CONSTRAINT [FK_Product_Company_CompanyId] FOREIGN KEY ([CompanyId]) REFERENCES [dbo].[Company] ([Id]),

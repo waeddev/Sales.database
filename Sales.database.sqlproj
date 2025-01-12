@@ -99,6 +99,8 @@
     <Build Include="dbo\Tables\Permissions.sql" />
     <Build Include="dbo\Tables\RolePermissions.sql" />
     <Build Include="dbo\Tables\UserPermissions.sql" />
+    <Build Include="dbo\UserDefinedTypes\AttributeTableType.sql" />
+    <Build Include="dbo\UserDefinedTypes\ProductVariationType.sql" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">
